@@ -23,8 +23,8 @@ export default function App() {
   return (
     <div className="App">
       <button onClick={onClickFetchData}>データ取得</button>
-      {todos.map((todo) => (
-        <Todo title={todo.title} userid={todo.userId} />
+      {todos.map((todo, index) => (
+        <Todo key={index} title={todo.title} userid={todo.userId} />
       ))}
     </div>
   );
